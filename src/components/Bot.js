@@ -1,17 +1,20 @@
 import React from 'react';
 
-function Bot({ bot, onAddToArmy }) {
+function Bot({ bot, onAddToArmy, isAdded }) {
   return (
-    <div>
+    <div className={`bot-card ${isAdded ? 'added' : ''}`}>
       <h3>{bot.name}</h3>
       <p>Health: {bot.health}</p>
       <p>Damage: {bot.damage}</p>
       <p>Armor: {bot.armor}</p>
       <p>Class: {bot.bot_class}</p>
-      <p>Catchphrase: {bot.catchphrase}</p>
       <img src={bot.avatar_url} alt={bot.name} />
 
+      {isAdded ? (
+        <p>Added to Army</p>
+      ) : (
       <button onClick={() => onAddToArmy(bot)}>Add to Army</button>
+      )}
     </div>
   );
 }
