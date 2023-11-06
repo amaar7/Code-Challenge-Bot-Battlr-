@@ -3,11 +3,19 @@ import Bot from './Bot';
 
 function YourBotArmy({ yourBotArmy, onRelease, onDischarge }) {
   return (
-    <div>
+    <div className="your-bot-army">
       <h2>Your Bot Army</h2>
-      {yourBotArmy.map((bot) => (
-        <Bot key={bot.id} bot={bot} onRelease={onRelease} onDischarge={onDischarge} />
-      ))}
+      <div className="bot-grid">
+        {yourBotArmy.map((bot) => (
+          <Bot
+            key={bot.id}
+            bot={bot}
+            onRelease={onRelease}
+            onDischarge={onDischarge}
+            isAdded={true}
+          />
+        ))}
+      </div>
     </div>
   );
 }
