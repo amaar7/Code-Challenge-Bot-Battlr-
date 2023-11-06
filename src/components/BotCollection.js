@@ -12,3 +12,4 @@ function BotCollection({ bots, onAddToArmy, yourBotArmy }) {
 }
 
 export default BotCollection;
+
