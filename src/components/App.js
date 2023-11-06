@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Bot from './Bot';
-
-import './App.css'; // Make sure to import your CSS file for styling
+import BotCollection from './BotCollection';
+import YourBotArmy from './YourBotArmy';
 
 function App() {
   const [bots, setBots] = useState([]);
   const [yourBotArmy, setYourBotArmy] = useState([]);
 
-  // Fetched bots data from the server
   useEffect(() => {
     fetch('http://localhost:8001/bots')
       .then((response) => response.json())
@@ -20,18 +18,15 @@ function App() {
     }
   };
 
+  const releaseBot = (bot) => {
+    const updatedArmy = yourBotArmy.filter((b) => b.id !== bot.id);
+    setYourBotArmy(updatedArmy);
+  };
+
   return (
     <div>
-      <div className="bot-grid">
-        {bots.map((bot) => (
-          <Bot
-            key={bot.id}
-            bot={bot}
-            onAddToArmy={addToArmy}
-            isAdded={yourBotArmy.includes(bot)}
-          />
-        ))}
-      </div>
+      <YourBotArmy yourBotArmy={yourBotArmy} onRelease={releaseBot} />
+      <BotCollection bots={bots} onAddToArmy={addToArmy} yourBotArmy={yourBotArmy} />
     </div>
   );
 }

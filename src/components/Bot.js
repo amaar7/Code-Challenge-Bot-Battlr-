@@ -10,11 +10,7 @@ function Bot({ bot, onAddToArmy, isAdded }) {
       <p>Class: {bot.bot_class}</p>
       <img src={bot.avatar_url} alt={bot.name} />
 
-      {isAdded ? (
-        <p>Added to Army</p>
-      ) : (
-      <button onClick={() => onAddToArmy(bot)}>Add to Army</button>
-      )}
+      {isAdded ? null : <button onClick={() => onAddToArmy(bot)}>Add to Army</button>}
     </div>
   );
 }

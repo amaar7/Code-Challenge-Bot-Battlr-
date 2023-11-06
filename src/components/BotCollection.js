@@ -1,12 +1,11 @@
 import React from 'react';
 import Bot from './Bot';
 
-function BotCollection({ bots, onAddToArmy }) {
+function BotCollection({ bots, onAddToArmy, yourBotArmy }) {
   return (
-    <div>
-      <h2>Bot Collection</h2>
+    <div className="bot-grid">
       {bots.map((bot) => (
-        <Bot key={bot.id} bot={bot} onAddToArmy={onAddToArmy} />
+        <Bot key={bot.id} bot={bot} onAddToArmy={onAddToArmy} isAdded={yourBotArmy.includes(bot)} />
       ))}
     </div>
   );
