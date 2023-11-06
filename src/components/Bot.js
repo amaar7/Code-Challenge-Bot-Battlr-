@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Bot({ bot, onAddToArmy, isAdded }) {
-  return (
+ return (
     <div className={`bot-card ${isAdded ? 'added' : ''}`}>
       <img src={bot.avatar_url} alt={bot.name} className="medium-bot" />
       <h3>{bot.name}</h3>
@@ -15,7 +15,7 @@ function Bot({ bot, onAddToArmy, isAdded }) {
         ) : null}
       </div>
     </div>
-  );
+ );
 }
 
 export default Bot;
