@@ -1,30 +1,13 @@
 /* App.css */
 .bot-card {
-    border: 1px solid #ddd;
-    margin: 10px;
-    padding: 10px;
-    display: inline-block;
-    width: calc(25% - 20px); /* 4 bots per row */
-    background-color: #fff;
-  }
-  
-  .bot-card.added {
-    background-color: purple;
-  }
-  .your-bot-army {
-    margin-top: 20px;
-  }
-  
-  .bot-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-  
-  .bot {
-    background-color: purple; /* Set the background color to purple */
-    color: white;
-    padding: 10px;
-    border: 1px solid #000;
-  }
-  
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  width: calc(66% - 20px); /* 4 bots per row */
+  background-color: #fff;
+}
+
+.bot-card.added {
+  background-color: purple;
+}
