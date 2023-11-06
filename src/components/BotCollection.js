@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './BotCollection.module.css';
 import Bot from './Bot';
+import styles from './BotCollection.module.css';
 
 function BotCollection({ bots, onAddToArmy }) {
  return (
@@ -13,3 +13,4 @@ function BotCollection({ bots, onAddToArmy }) {
 }
 
 export default BotCollection;
+

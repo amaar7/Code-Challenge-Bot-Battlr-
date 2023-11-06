@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Bot({ bot, onAddToArmy, isAdded }) {
- return (
+  return (
     <div className={`bot-card ${isAdded ? 'added' : ''}`}>
       <img src={bot.avatar_url} alt={bot.name} className="medium-bot" />
       <h3>{bot.name}</h3>
@@ -10,12 +10,10 @@ function Bot({ bot, onAddToArmy, isAdded }) {
       <p>Armor: {bot.armor}</p>
       <div className="bot-class">
         <p>Class: {bot.bot_class}</p>
-        {!isAdded ? (
-          <button onClick={() => onAddToArmy(bot)}>Add to Army</button>
-        ) : null}
       </div>
+      <button onClick={() => onAddToArmy(bot)}>Add to Army</button>
     </div>
- );
+  );
 }
 
 export default Bot;

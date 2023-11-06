@@ -6,8 +6,8 @@
   width: calc(12% - 20px); 
   background-color: #fff;
   text-align: center;
-  overflow: hidden; 
-  position: relative; 
+  overflow: hidden;
+  position: relative;
 }
 
 .bot-card img.medium-bot {
@@ -17,15 +17,21 @@
 .bot-card button {
   margin-top: 10px;
   position: absolute;
-  bottom: 10px; 
-  left: 50%; 
-  transform: translateX(-50%); 
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 .bot-card .bot-class {
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .army-container {
   background-color: green;
   padding: 10px;
+}
+
+/* Add spacing for army bots */
+.army-bot {
+  margin: 0 60px 60px 0;
 }
